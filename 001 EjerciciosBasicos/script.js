@@ -1,35 +1,24 @@
 //Count Vowels
 //Version1
-
 /* 
-
 function countV(palabraInput) {
-
   let palabraArray = palabraInput.split("");
   let contador = 0;
   let vocales = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
   for (var i = 0; i < palabraArray.length; i++) {
     let letraAnalizada = palabraArray[i];
-
     for (var ii = 0; ii < vocales.length; ii++) {
-
       if (letraAnalizada === vocales[ii]) {
         contador++;
       };
-
     };
-
   };
   console.log(contador);
 };
-
 countV("Vete a la verga");
-
  */
 
-
 //Version 2
-
 /* 
 function countVowels2(cadena2) {
   //let palabrejas2 = cadena2;
@@ -49,13 +38,11 @@ function countVowels2(cadena2) {
 
 let resultado2 = countVowels2("Como que Zombies Amigo???");
 console.log(resultado2);
-
  */
-
 
 //Versión 3
 //for let of
-
+/* 
 function countV3(cadena3) {
   let vocales3 = "aeiouAEIOU";
   let contador3 =0;
@@ -66,5 +53,16 @@ function countV3(cadena3) {
   };
 return contador3;
 };
-
 console.log(countV3('hola amigones aaa') );
+*/
+
+//EJERCICIOS DIVERSOS CON METODOS Y PROPIEDADES
+
+
+
+
+
+
+
+
+
