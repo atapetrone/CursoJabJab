@@ -42,21 +42,21 @@ console.log(resultado2);
 
 //Versión 3 :
 //for let of
-function escribeFrase(){
-  let frase3= prompt("Escribe una frase para contar el nuemro de vocales que contiene");
-  
+function escribeFrase() {
+  let frase3 = prompt("Escribe una frase para contar el nuemro de vocales que contiene");
 
-    let vocales3 = "aeiouAEIOU";
-    let contador3 =0;
-    for (let elem of frase3) {
-      if (vocales3.includes(elem)) {
-        contador3++;
-      };
+
+  let vocales3 = "aeiouAEIOU";
+  let contador3 = 0;
+  for (let elem of frase3) {
+    if (vocales3.includes(elem)) {
+      contador3++;
     };
-  
-    console.log(`La palabra "${frase3}" contiene el siguiente número de vocales: ${contador3}`);
-    
   };
+
+  //console.log(`La palabra "${frase3}" contiene el siguiente número de vocales: ${contador3}`);
+  alert(`La palabra "${frase3}" contiene el siguiente número de vocales: ${contador3}`);
+};
 
 
 
@@ -121,7 +121,7 @@ diaHora();
 
 //Otra versión del ejercicio anterior utilizando un array en lugar de switch :
 
- 
+
 function diaHora2() {
 
   let fecha2 = new Date();
@@ -142,13 +142,14 @@ function diaHora2() {
 
   let diaSemArray = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
 
-  console.log(`El día de hoy es ${diaSemArray[diaSemana2]} `);
+  //console.log(`El día de hoy es ${diaSemArray[diaSemana2]} `);
   if (horaActual2 == 0) {
     horaActual2 = 12;
   } else if (horaActual2 > 12) {
     horaActual2 = horaActual2 - 12;
   };
-  console.log(`y son las ${horaActual2} ${ampm2} con ${minutoActual2} minutos y ${segundoActual2} segundos`)
+  //console.log(`El día de hoy es ${diaSemArray[diaSemana2]} y son las ${horaActual2} ${ampm2} con ${minutoActual2} minutos y ${segundoActual2} segundos`)
+  alert(`El día de hoy es ${diaSemArray[diaSemana2]} y son las ${horaActual2} ${ampm2} con ${minutoActual2} minutos y ${segundoActual2} segundos`)
 }
 
 //diaHora2();
@@ -157,12 +158,59 @@ function diaHora2() {
 
 //IMPRIMIR LA VENTANA ACTUAL:
 
-function imprimiendo(){
+function imprimiendo() {
   window.print();
 }
 
+// LLEVAR LA FECHA DE HOY A DIFERENTES FORMATOS
+
+function fechando(){
+
+var today = new Date(); //ESTO TE DA LA FECHA DE HOY Y LA ASIGNA A UNA VARIABLE
+console.log(today);
+var dd = today.getDate(); //SE APLICA A LA VARIABLE EL METODO getDate() para obtener el numero de dia
+console.log(dd);
+var mm = today.getMonth();
+//console.log(mm); // COMO PUEDES OBSERVAR NO TE DA EL NUMERO DE MES EXACTO YA QUE ENERO LO CONTABILIZA COMO EL MES 0
+var mm = today.getMonth() + 1; //POR LO TANTO TENEMOS QUE AGREGAR UN UNO A LA CUENTA
+console.log(mm);
+var yyyy = today.getFullYear();
+console.log(yyyy);
+
+if (dd < 10) { //ACA LE AGREGAMOS UN 0 EN CASO DE SOLO SER UN DIGITO PARA MANTENER UN FORMATO SIMILAR
+  dd = '0' + dd;
+}
+
+if (mm < 10) { //ACA LE AGREGAMOS UN 0 EN CASO DE SOLO SER UN DIGITO PARA MANTENER UN FORMATO SIMILAR
+  mm = '0' + mm;
+}
+
+// AHORA HACEMOS EL DESPLEGADO MEDIANTE EL SIGNO + DE CONCATENACIÓN
+let today1, today2, today3, today4;
+today1 = mm + '-' + dd + '-' + yyyy;
+console.log(today1);
+today2 = mm + '/' + dd + '/' + yyyy;
+console.log(today2);
+today3 = dd + '-' + mm + '-' + yyyy;
+console.log(today3);
+today4 = dd + '/' + mm + '/' + yyyy;
+console.log(today4);
+alert(` ${today1} \n ${today2} \n ${today3} \n ${today4} `)
+};
+
+// Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are x, y and z
+
+function calculaArea(){
+  let baseTri= prompt("Escribe la base de tu triángulo (Número Entero o Flotante)");
+  let alturaTri= prompt("Escribe la altura de tu triángulo (Número Entero o Flotante)");
+  //console.log(`${baseTri} ${alturaTri}`);
+  let resultado = (baseTri * alturaTri)/2;
+  alert(`El área de tu triangulo es ${resultado}`)
+
+};
 
 
+//Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front
 
 
 
