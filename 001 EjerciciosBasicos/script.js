@@ -147,7 +147,11 @@ diaHora2();
  */
 
 
-//
+//IMPRIMIR LA VENTANA ACTUAL:
+
+function imprimiendo(){
+  window.print();
+}
 
 
 
