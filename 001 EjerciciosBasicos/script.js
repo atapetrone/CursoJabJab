@@ -1,5 +1,5 @@
 //Count Vowels
-//Version1
+//Version1:
 /* 
 function countV(palabraInput) {
   let palabraArray = palabraInput.split("");
@@ -18,7 +18,7 @@ function countV(palabraInput) {
 countV("Vete a la verga");
  */
 
-//Version 2
+//Version 2 :
 /* 
 function countVowels2(cadena2) {
   //let palabrejas2 = cadena2;
@@ -40,7 +40,7 @@ let resultado2 = countVowels2("Como que Zombies Amigo???");
 console.log(resultado2);
  */
 
-//Versión 3
+//Versión 3 :
 //for let of
 /* 
 function countV3(cadena3) {
@@ -58,10 +58,96 @@ console.log(countV3('hola amigones aaa') );
 
 //EJERCICIOS DIVERSOS CON METODOS Y PROPIEDADES
 
+//1.- DESPLEGAR EL DIA DE LA SEMANA Y LA HORA CON MINUTOS Y SEGUNDOS :
+
+/* 
+
+function diaHora(){
+  
+  let fecha = new Date();
+  //console.log(fecha);
+  let diaSemana = fecha.getDay();
+  //console.log(diaSemana);
+  let horaActual = fecha.getHours();
+  //console.log(horaActual);
+  let minutoActual = fecha.getMinutes();
+  //console.log (minutoActual);
+  let segundoActual = fecha.getSeconds();
+  //console.log (segundoActual);
+
+  let ampm ="AM";
+  if (horaActual>=12){
+ampm = 'PM'
+  };
+
+  let diaSemanaEscrito;
+switch(diaSemana){
+case 1 : diaSemanaEscrito ="lunes"
+break;
+case 2 : diaSemanaEscrito ="martes"
+break;
+case 3 : diaSemanaEscrito ="miercoles"
+break;
+case 4 : diaSemanaEscrito ="jueves"
+break;
+case 5 : diaSemanaEscrito ="viernes"
+break;
+case 6 : diaSemanaEscrito ="sabado"
+break;
+case 7 : diaSemanaEscrito ="domingo"
+break;
+};
+
+  console.log(`El día de hoy es ${diaSemanaEscrito} `);
+  if (horaActual ==0){
+    horaActual=12;
+  }else if (horaActual>12){
+horaActual=horaActual-12;
+  };
+  console.log (`y son las ${horaActual} ${ampm} con ${minutoActual} minutos y ${segundoActual} segundos`)
+}
+
+diaHora();
+
+ */
+
+//Otra versión del ejercicio anterior utilizando un array en lugar de switch :
+
+/* 
+function diaHora2() {
+
+  let fecha2 = new Date();
+  //console.log(fecha);
+  let diaSemana2 = fecha2.getDay();
+  //console.log(diaSemana);
+  let horaActual2 = fecha2.getHours();
+  //console.log(horaActual);
+  let minutoActual2 = fecha2.getMinutes();
+  //console.log (minutoActual);
+  let segundoActual2 = fecha2.getSeconds();
+  //console.log (segundoActual);
+
+  let ampm2 = "AM";
+  if (horaActual2 >= 12) {
+    ampm2 = 'PM'
+  };
+
+  let diaSemArray = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
+
+  console.log(`El día de hoy es ${diaSemArray[diaSemana2]} `);
+  if (horaActual2 == 0) {
+    horaActual2 = 12;
+  } else if (horaActual2 > 12) {
+    horaActual2 = horaActual2 - 12;
+  };
+  console.log(`y son las ${horaActual2} ${ampm2} con ${minutoActual2} minutos y ${segundoActual2} segundos`)
+}
+
+diaHora2();
+ */
 
 
-
-
+//
 
 
 
