@@ -42,19 +42,27 @@ console.log(resultado2);
 
 //Versión 3 :
 //for let of
-/* 
-function countV3(cadena3) {
-  let vocales3 = "aeiouAEIOU";
-  let contador3 =0;
-  for (let elem of cadena3) {
-    if (vocales3.includes(elem)) {
-      contador3++;
+function escribeFrase(){
+  let frase3= prompt("Escribe una frase para contar el nuemro de vocales que contiene");
+  
+
+    let vocales3 = "aeiouAEIOU";
+    let contador3 =0;
+    for (let elem of frase3) {
+      if (vocales3.includes(elem)) {
+        contador3++;
+      };
     };
+  
+    console.log(`La palabra "${frase3}" contiene el siguiente número de vocales: ${contador3}`);
+    
   };
-return contador3;
-};
-console.log(countV3('hola amigones aaa') );
-*/
+
+
+
+
+//console.log(countV3('hola amigones aaa') );
+
 
 //EJERCICIOS DIVERSOS CON METODOS Y PROPIEDADES
 
@@ -113,7 +121,7 @@ diaHora();
 
 //Otra versión del ejercicio anterior utilizando un array en lugar de switch :
 
-/* 
+ 
 function diaHora2() {
 
   let fecha2 = new Date();
@@ -143,8 +151,8 @@ function diaHora2() {
   console.log(`y son las ${horaActual2} ${ampm2} con ${minutoActual2} minutos y ${segundoActual2} segundos`)
 }
 
-diaHora2();
- */
+//diaHora2();
+
 
 
 //IMPRIMIR LA VENTANA ACTUAL:
@@ -152,6 +160,15 @@ diaHora2();
 function imprimiendo(){
   window.print();
 }
+
+
+
+
+
+
+
+
+
 
 
 
