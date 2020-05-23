@@ -164,47 +164,47 @@ function imprimiendo() {
 
 // LLEVAR LA FECHA DE HOY A DIFERENTES FORMATOS
 
-function fechando(){
+function fechando() {
 
-var today = new Date(); //ESTO TE DA LA FECHA DE HOY Y LA ASIGNA A UNA VARIABLE
-console.log(today);
-var dd = today.getDate(); //SE APLICA A LA VARIABLE EL METODO getDate() para obtener el numero de dia
-console.log(dd);
-var mm = today.getMonth();
-//console.log(mm); // COMO PUEDES OBSERVAR NO TE DA EL NUMERO DE MES EXACTO YA QUE ENERO LO CONTABILIZA COMO EL MES 0
-var mm = today.getMonth() + 1; //POR LO TANTO TENEMOS QUE AGREGAR UN UNO A LA CUENTA
-console.log(mm);
-var yyyy = today.getFullYear();
-console.log(yyyy);
+  var today = new Date(); //ESTO TE DA LA FECHA DE HOY Y LA ASIGNA A UNA VARIABLE
+  console.log(today);
+  var dd = today.getDate(); //SE APLICA A LA VARIABLE EL METODO getDate() para obtener el numero de dia
+  console.log(dd);
+  var mm = today.getMonth();
+  //console.log(mm); // COMO PUEDES OBSERVAR NO TE DA EL NUMERO DE MES EXACTO YA QUE ENERO LO CONTABILIZA COMO EL MES 0
+  var mm = today.getMonth() + 1; //POR LO TANTO TENEMOS QUE AGREGAR UN UNO A LA CUENTA
+  console.log(mm);
+  var yyyy = today.getFullYear();
+  console.log(yyyy);
 
-if (dd < 10) { //ACA LE AGREGAMOS UN 0 EN CASO DE SOLO SER UN DIGITO PARA MANTENER UN FORMATO SIMILAR
-  dd = '0' + dd;
-}
+  if (dd < 10) { //ACA LE AGREGAMOS UN 0 EN CASO DE SOLO SER UN DIGITO PARA MANTENER UN FORMATO SIMILAR
+    dd = '0' + dd;
+  }
 
-if (mm < 10) { //ACA LE AGREGAMOS UN 0 EN CASO DE SOLO SER UN DIGITO PARA MANTENER UN FORMATO SIMILAR
-  mm = '0' + mm;
-}
+  if (mm < 10) { //ACA LE AGREGAMOS UN 0 EN CASO DE SOLO SER UN DIGITO PARA MANTENER UN FORMATO SIMILAR
+    mm = '0' + mm;
+  }
 
-// AHORA HACEMOS EL DESPLEGADO MEDIANTE EL SIGNO + DE CONCATENACIÓN
-let today1, today2, today3, today4;
-today1 = mm + '-' + dd + '-' + yyyy;
-console.log(today1);
-today2 = mm + '/' + dd + '/' + yyyy;
-console.log(today2);
-today3 = dd + '-' + mm + '-' + yyyy;
-console.log(today3);
-today4 = dd + '/' + mm + '/' + yyyy;
-console.log(today4);
-alert(` ${today1} \n ${today2} \n ${today3} \n ${today4} `)
+  // AHORA HACEMOS EL DESPLEGADO MEDIANTE EL SIGNO + DE CONCATENACIÓN
+  let today1, today2, today3, today4;
+  today1 = mm + '-' + dd + '-' + yyyy;
+  console.log(today1);
+  today2 = mm + '/' + dd + '/' + yyyy;
+  console.log(today2);
+  today3 = dd + '-' + mm + '-' + yyyy;
+  console.log(today3);
+  today4 = dd + '/' + mm + '/' + yyyy;
+  console.log(today4);
+  alert(` ${today1} \n ${today2} \n ${today3} \n ${today4} `)
 };
 
 // Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are x, y and z
 
-function calculaArea(){
-  let baseTri= prompt("Escribe la base de tu triángulo (Número Entero o Flotante)");
-  let alturaTri= prompt("Escribe la altura de tu triángulo (Número Entero o Flotante)");
+function calculaArea() {
+  let baseTri = prompt("Escribe la base de tu triángulo (Número Entero o Flotante)");
+  let alturaTri = prompt("Escribe la altura de tu triángulo (Número Entero o Flotante)");
   //console.log(`${baseTri} ${alturaTri}`);
-  let resultado = (baseTri * alturaTri)/2;
+  let resultado = (baseTri * alturaTri) / 2;
   alert(`El área de tu triangulo es ${resultado}`)
 
 };
@@ -212,6 +212,55 @@ function calculaArea(){
 
 //Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front
 
+function rotaCadena() {
+  let stringRotar = prompt("Escribe algo que quieras rotar");
+  console.log(stringRotar);
+  let cadenaRotarArray = stringRotar.split("");
+  let cadenaAlternaArray = stringRotar.split("");
+
+  let countRotar = cadenaRotarArray.length;
+  //let i = 0;
+
+  let seleccionHtml2 = document.querySelector(".rotando");
+  //console.log(seleccionHtml);
+  seleccionHtml2.innerText = stringRotar;
+
+  setTimeout( function(){
+
+    for (let i = 0; i < countRotar; i++) {
+      setTimeout(function timer() {
+
+        let chispaLetra = cadenaAlternaArray[i];
+        cadenaRotarArray.push(chispaLetra);
+        cadenaRotarArray.shift()
+
+        let palabraCongelada = cadenaRotarArray.join("");
+        //console.log(palabraCongelada);
+
+        let seleccionHtml = document.querySelector(".rotando");
+        //console.log(seleccionHtml);
+        seleccionHtml.innerText = palabraCongelada;
+
+      }, i * 300);
+    }
+
+  },300);
+  /* 
+    while (i < countRotar) {
+      let chispaLetra = cadenaAlternaArray[i];
+      cadenaRotarArray.push(chispaLetra);
+      cadenaRotarArray.shift()
+
+      let palabraCongelada = cadenaRotarArray.join("");
+      console.log(palabraCongelada);
+
+      let seleccionHtml = document.querySelector(".rotando");
+      //console.log(seleccionHtml);
+      seleccionHtml.innerText = palabraCongelada;
+
+      i++;
+    };
+   */
 
 
 
@@ -220,4 +269,4 @@ function calculaArea(){
 
 
 
-
+};
