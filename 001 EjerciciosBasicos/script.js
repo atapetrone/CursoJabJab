@@ -242,7 +242,7 @@ function rotaCadena() {
         seleccionHtml.innerText = palabraCongelada;
 
       }, i * 300);
-    }
+    };
 
   },300);
   /* 
