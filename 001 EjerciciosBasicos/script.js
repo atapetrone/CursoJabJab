@@ -266,6 +266,24 @@ function rotaCadena() {
 
 
 
+
+//  Rotar un mensaje , ejercicio alterno
+function animate_string(idRotar) {
+  var elementRotar = document.getElementById(idRotar);
+  //console.log(elementRotar);
+  var textNodeRotar = elementRotar.firstChild;//childNodes[0]; // assuming no other children ... ESTO DA COMO RESULTADO UN OBJETO
+  console.log(textNodeRotar);
+  console.log (typeof textNodeRotar); // es un objeto de tipo node list
+  var textRotar = textNodeRotar.data; //Esto transforma de objeto a string
+  //console.log (typeof textRotar);
+  //console.log(textRotar);
+  setInterval(function () {
+    textRotar = textRotar[textRotar.length - 1] + textRotar.substring(0, textRotar.length - 1);
+    textNodeRotar.data = textRotar;
+  }, 100);
+};
+
+
 function negativo() {
 
   let numeroPos = prompt("Dame un numero positivo");
@@ -360,7 +378,7 @@ function toJadenCase(cadenaJaden2) {
   let wordsJaden2 = cadenaJaden2.split(" ");
   //console.log(wordsJaden2);
   let finalResultJaden2 = [];
-  
+
   for (let jadenElem2 of wordsJaden2) {
     let resultadoJadenComplem = jadenComplementaria(jadenElem2)
     finalResultJaden2.push(resultadoJadenComplem);
@@ -368,8 +386,8 @@ function toJadenCase(cadenaJaden2) {
 
 
   }
-//console.log(finalResultJaden2);
-return console.log(finalResultJaden2.join(" "));
+  //console.log(finalResultJaden2);
+  return console.log(finalResultJaden2.join(" "));
 
 
 
@@ -386,8 +404,17 @@ function jadenComplementaria(wordJadenComplemento) {
 };
 //jadenComplementaria("rAce"); //Probando
 
-toJadenCase("hola amIGOS dEl mundo munDIAl");
+toJadenCase("hola amIGOS dEl mundo munDIAl (Ejemplo de ejercicio jadenCase)");
 
 
-//
+
+
+
+// TARTAMUDO
+
+function tartamudo(){
+  let msjIniTarta = prompt("Escribe un mensaje para transformarlo en tartamudo");
+
+
+};
 
