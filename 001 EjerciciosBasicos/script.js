@@ -225,7 +225,7 @@ function rotaCadena() {
   //console.log(seleccionHtml);
   seleccionHtml2.innerText = stringRotar;
 
-  setTimeout( function(){
+  setTimeout(function () {
 
     for (let i = 0; i < countRotar; i++) {
       setTimeout(function timer() {
@@ -244,7 +244,7 @@ function rotaCadena() {
       }, i * 300);
     };
 
-  },300);
+  }, 300);
   /* 
     while (i < countRotar) {
       let chispaLetra = cadenaAlternaArray[i];
@@ -262,11 +262,97 @@ function rotaCadena() {
     };
    */
 
+};
+
+
+
+function negativo() {
+
+  let numeroPos = prompt("Dame un numero positivo");
+  let seleccionHtml7 = document.querySelector('.negativo');
+  //console.log (seleccionHtml7);
+  let numeroNeg = -numeroPos;
+  //console.log (numeroNeg);
+  seleccionHtml7.innerText = `El numero negativo es ${numeroNeg} `;
+};
 
 
 
 
+function parnon() {
+  let numeroEntero = prompt("Dame un numero entero");
+  let seleccionHtml8 = document.querySelector('.parnonClass');
+  let resultado = numeroEntero % 2;
+  let resultado8 = 0;
+  if (resultado === 0) {
+    resultado8 = "Tu numero es PAR";
+  } else {
+    resultado8 = "Tu numero es NON";
+  }
+  seleccionHtml8.innerText = ` ${resultado8}`;
+};
 
+
+function caraCentral() {
+
+  let conjuntoLetras = prompt("Escribe una cadena de caracteres");
+  let numLetras = conjuntoLetras.length;
+  let resultado9 = numLetras % 2;
+  //console.log(`numero de letras: ${numLetras}\nsobrante: ${resultado9} `)
+  let entre2 = numLetras / 2;
+  let primerCorte;
+  let segundoCorte;
+
+  if (resultado9 == 0) {
+    primerCorte = entre2 - 1;
+    segundoCorte = entre2 + 1;
+    //console.log(primerCorte);
+    //console.log(segundoCorte);
+  } else {
+    primerCorte = entre2 - .5;
+    segundoCorte = entre2 + .5;
+  }
+
+  let palabraCortada = conjuntoLetras.slice(primerCorte, segundoCorte);
+
+  let agarra9 = document.querySelector(".caraClass");
+
+  agarra9.innerText = `El o los caracteres centrales son: "${palabraCortada}"`;
+
+};
+
+//SIGUIENTE EJERCICIO: JADEN CASE
+
+
+function jadenCase() {
+  let mensajeJaden = prompt("Escribe un mensaje para transformarlo en formato JadenCase");
+  let mensajeJadenArray = mensajeJaden.split(" ");
+  //console.log(mensajeJadenArray);
+  let finalJadenArray = [];
+  for (let jadenElem of mensajeJadenArray) {
+
+
+    //console.log(typeof palabraInicial);
+    //console.log(palabraInicial);
+    let letraInicial = jadenElem.charAt(0)
+    let letraFinal = letraInicial.toUpperCase();
+    //console.log(letraFinal);
+    let palabraFinal = jadenElem;
+    palabraFinal = palabraFinal.replace(letraInicial, letraFinal);
+    //console.log(palabraFinal);
+    finalJadenArray.push(palabraFinal);
+    //console.log(finalJadenArray);
+  };
+  let finalJadenString = finalJadenArray.join(" ")
+  console.log(finalJadenString);
+
+  let agarra10 = document.querySelector(".jadenClass");
+
+  agarra10.innerText = finalJadenString;
 
 
 };
+
+
+
+
