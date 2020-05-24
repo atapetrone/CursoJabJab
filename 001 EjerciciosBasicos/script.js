@@ -350,9 +350,44 @@ function jadenCase() {
 
   agarra10.innerText = finalJadenString;
 
-
 };
 
 
+//JADEN CASE:  OTRA VERSIÓN:
 
+
+function toJadenCase(cadenaJaden2) {
+  let wordsJaden2 = cadenaJaden2.split(" ");
+  //console.log(wordsJaden2);
+  let finalResultJaden2 = [];
+  
+  for (let jadenElem2 of wordsJaden2) {
+    let resultadoJadenComplem = jadenComplementaria(jadenElem2)
+    finalResultJaden2.push(resultadoJadenComplem);
+
+
+
+  }
+//console.log(finalResultJaden2);
+return console.log(finalResultJaden2.join(" "));
+
+
+
+};
+
+function jadenComplementaria(wordJadenComplemento) {
+  let jadenMayusculaCompl = wordJadenComplemento[0].toUpperCase();
+  let jadenMinusculasCompl = wordJadenComplemento.slice(1);
+  jadenMinusculasCompl = jadenMinusculasCompl.toLowerCase();
+
+
+  return `${jadenMayusculaCompl}${jadenMinusculasCompl}`
+
+};
+//jadenComplementaria("rAce"); //Probando
+
+toJadenCase("hola amIGOS dEl mundo munDIAl");
+
+
+//
 
