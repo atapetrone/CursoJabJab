@@ -202,9 +202,23 @@ function fechando() {
 
 function calculaArea() {
   let baseTri = prompt("Escribe la base de tu triángulo (Número Entero o Flotante)");
-  let alturaTri = prompt("Escribe la altura de tu triángulo (Número Entero o Flotante)");
-  //console.log(`${baseTri} ${alturaTri}`);
-  let resultado = (baseTri * alturaTri) / 2;
+  let lado1Tri = prompt("Escribe la magnitud del primer lado de tu triángulo (Número Entero o Flotante)");
+  let lado2Tri = prompt("Escribe la magnitud del segundo lado de tu triángulo (Número Entero o Flotante)");
+
+  console.log(`${typeof baseTri} , ${typeof lado1Tri} , ${typeof lado2Tri}`);
+
+  baseTri = parseInt(baseTri);
+  lado1Tri = parseInt(lado1Tri);
+  lado2Tri = parseInt(lado2Tri);
+
+  console.log(`${typeof baseTri} , ${typeof lado1Tri} , ${typeof lado2Tri}`);
+
+  let ese = (baseTri + lado1Tri + lado2Tri) / 2;
+  //console.log(ese);
+  let tripas = ese * ((ese - baseTri) * (ese - lado1Tri) * (ese - lado2Tri));
+  let sqrtTri = Math.sqrt(tripas);
+
+  let resultado = sqrtTri;
   alert(`El área de tu triangulo es ${resultado}`)
 
 };
@@ -418,10 +432,12 @@ function tartamudo() {
     //console.log(resultadoArrayMinus);
 
     let laLetraMayus = letraTartaEle.toUpperCase(); //Aqui se agrega la mayuscula para completar el objetivo
-    resultadoArrayMinus.unshift(laLetraMayus);
+    resultadoArrayMinus.unshift(`-${laLetraMayus}`);
     respuestaTarta = respuestaTarta.concat(resultadoArrayMinus);
   };
+
   let StringRespuestaTarta = respuestaTarta.join("");
+  StringRespuestaTarta = StringRespuestaTarta.slice(1);
   console.log(StringRespuestaTarta);
 
   let agarraTarta = document.querySelector('.tartaClass');
@@ -442,5 +458,83 @@ function letraTartamuda(letraT, posiT) {
   };
   return minusArray
 };
+
+// Un año es bisiesto si cumple los siguientes criterios:
+/* 
+Es bisiesto si es divisible entre 4.
+Pero no es bisiesto si es divisible entre 100.
+Pero sí es bisiesto si es divisible entre 400. (2000 y 2400 sí son bisiestos son divisibles entre 100 pero también entre 400. 1900, 2100, 2200 y 2300 no lo son porque solo son divisibles entre 100). 
+*/
+
+function bisiesto() {
+  let anioPorAnalizar = prompt("Danos un año para analizar toda la decada alredor. (Cuatro dígitos")
+  anioPorAnalizar = parseInt(anioPorAnalizar);
+  arrayAnios = [];
+  let resultPorAnio;
+  for (i = -5; i <= 5; i++) {
+    arrayAnios.push(anioPorAnalizar + i);
+  };
+  //let agarraBisi;
+  let eBisi = 1;
+  for (let anio of arrayAnios) {
+
+    resultPorAnio = bisiestoA(anio);
+
+    let agarraBisi = document.querySelector(`#bisiClass${eBisi}`);
+    agarraBisi.innerText = `${anio} ${resultPorAnio}`;
+    //console.log (agarraBisi);
+
+    eBisi++;
+
+    //console.log(`${anio} ${resultPorAnio} ${eBisi}`);
+  };
+};
+
+function bisiestoA(year) {
+  let prueba1 = false;
+  let prueba2 = false;
+  let prueba3 = false;
+  let resultado = "NO ES BISIESTO";
+  if (year % 4 == 0) {
+    prueba1 = true;
+  };
+  if (year % 100 == 0) {
+    prueba2 = true;
+  };
+  if (year % 400 == 0) {
+    prueba3 = true;
+  };
+  if (prueba1 == true && prueba2 == true && prueba3 == true) {
+    resultado = "SI ES BISIESTO";
+  } else if (prueba1 == true && prueba2 == false) {
+    resultado = "SI ES BISIESTO";
+  };
+  return resultado;
+};
+
+
+
+function maximo() {
+  let cadenaGrupoNum = prompt('Escribe numeros separados con una coma Ejemplo: 23,45,33,22,3');
+  let arrayGrupoNum = cadenaGrupoNum.split(",");
+  //let respuestaMax = 0;
+
+  for (let maxEle of arrayGrupoNum) {
+
+    for (submax of arrayGrupoNum) {
+      let numSubmax =  parseInt(submax);
+      if (numSubmax > maxEle) {
+        var respuestaMax = numSubmax;
+      };
+    };
+
+  };
+
+  let agarraMax = document.querySelector('.maxiClass');
+  agarraMax.innerText = respuestaMax;
+  //console.log(respuestaMax);
+};
+
+
 
 
