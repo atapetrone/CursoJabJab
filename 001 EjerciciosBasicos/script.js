@@ -271,9 +271,9 @@ function rotaCadena() {
 function animate_string(idRotar) {
   var elementRotar = document.getElementById(idRotar);
   //console.log(elementRotar);
-  var textNodeRotar = elementRotar.firstChild;//childNodes[0]; // assuming no other children ... ESTO DA COMO RESULTADO UN OBJETO
+  var textNodeRotar = elementRotar.firstChild; //childNodes[0]; // assuming no other children ... ESTO DA COMO RESULTADO UN OBJETO
   console.log(textNodeRotar);
-  console.log (typeof textNodeRotar); // es un objeto de tipo node list
+  console.log(typeof textNodeRotar); // es un objeto de tipo node list
   var textRotar = textNodeRotar.data; //Esto transforma de objeto a string
   //console.log (typeof textRotar);
   //console.log(textRotar);
@@ -382,15 +382,9 @@ function toJadenCase(cadenaJaden2) {
   for (let jadenElem2 of wordsJaden2) {
     let resultadoJadenComplem = jadenComplementaria(jadenElem2)
     finalResultJaden2.push(resultadoJadenComplem);
-
-
-
   }
   //console.log(finalResultJaden2);
   return console.log(finalResultJaden2.join(" "));
-
-
-
 };
 
 function jadenComplementaria(wordJadenComplemento) {
@@ -412,9 +406,41 @@ toJadenCase("hola amIGOS dEl mundo munDIAl (Ejemplo de ejercicio jadenCase)");
 
 // TARTAMUDO
 
-function tartamudo(){
-  let msjIniTarta = prompt("Escribe un mensaje para transformarlo en tartamudo");
+function tartamudo() {
+  let msjIniTarta = prompt("Escribe un mensaje para transformarlo en tartamudo"); //  SE RECOLECTA EL MENSAJE
+  let msjIniTartaArray = msjIniTarta.split(""); // EL MENSAJE SE CONVIERTE EN UN ARRAY SEPARADO POR CADA LETRA
+  let respuestaTarta = []; //SE CREA UN ARRAY VACIO
+  let iTarta = -1; // SE CREA UN CONTADOR
+  for (let letraTartaEle of msjIniTartaArray) {
+    iTarta++; // LOOP DE CADA LETRA DEL ARRAY
 
+    let resultadoArrayMinus = letraTartamuda(letraTartaEle, (iTarta)); //POR CADA LETRA SE EXTRAE LA CADENA DE CARACTERES SEGUN SU POSICION
+    //console.log(resultadoArrayMinus);
+
+    let laLetraMayus = letraTartaEle.toUpperCase(); //Aqui se agrega la mayuscula para completar el objetivo
+    resultadoArrayMinus.unshift(laLetraMayus);
+    respuestaTarta = respuestaTarta.concat(resultadoArrayMinus);
+  };
+  let StringRespuestaTarta = respuestaTarta.join("");
+  console.log(StringRespuestaTarta);
+
+  let agarraTarta = document.querySelector('.tartaClass');
+  agarraTarta.innerText = StringRespuestaTarta;
+
+  //console.log(agarraTarta);
 
 };
+
+
+function letraTartamuda(letraT, posiT) {
+  let minusTarta = letraT.toLowerCase();
+  let minusArray = [];
+  for (let eTarta = 0; eTarta < posiT; eTarta++) {
+    if (minusTarta !== " ") {
+      minusArray.push(minusTarta);
+    };
+  };
+  return minusArray
+};
+
 
