@@ -517,8 +517,7 @@ function bisiestoA(year) {
 function maximo() {
   let cadenaGrupoNum = prompt('Escribe numeros separados con una coma Ejemplo: 23,45,33,22,3');
   let arrayGrupoNum = cadenaGrupoNum.split(",");
-  //let respuestaMax = 0;
-
+  
   for (let maxEle of arrayGrupoNum) {
 
     for (submax of arrayGrupoNum) {
