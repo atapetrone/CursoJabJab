@@ -517,11 +517,11 @@ function bisiestoA(year) {
 function maximo() {
   let cadenaGrupoNum = prompt('Escribe numeros separados con una coma Ejemplo: 23,45,33,22,3');
   let arrayGrupoNum = cadenaGrupoNum.split(",");
-  
+
   for (let maxEle of arrayGrupoNum) {
 
     for (submax of arrayGrupoNum) {
-      let numSubmax =  parseInt(submax);
+      let numSubmax = parseInt(submax);
       if (numSubmax > maxEle) {
         var respuestaMax = numSubmax;
       };
@@ -537,3 +537,59 @@ function maximo() {
 
 
 
+function domingo() {
+  //let fechaDomi = new Date(); //Este te tomaría la fecha de hoy
+  let fechaDomi = new Date(2020, 0, 1);
+  /* 
+    console.log(fechaDomi.getFullYear());
+    console.log(fechaDomi.getMonth()); // 0 es enero
+    console.log(fechaDomi.getDate());
+    console.log(fechaDomi.getDay()); // 0 es domingo
+    console.log("-----------------------------------");
+   */
+  //IMPORTANTE PRUEBA PARA ENTENDER LA FORMA DE MODIFICAR LA FECHA
+  /* 
+  fechaDomi.setDate(fechaDomi.getDate() + 10958);
+  console.log(fechaDomi.getFullYear());
+  console.log(fechaDomi.getMonth());// 0 es enero
+  console.log(fechaDomi.getDate());
+  console.log(fechaDomi.getDay()); // 0 es domingo
+ */
+
+  //fechaDomi.setDate(fechaDomi.getDate() + 10958);
+  let fechaInicial = new Date(2020, 0, 1);
+  //console.log(diaSemana); // 0 es domingo
+  let diaSemana; // = fechaDomi.getDay(); // 0 es domingo;
+  let mesContado;
+  let anioContado;
+  let diaMes;
+  let countDay = 0;
+  while (countDay <= 100) {
+//while (countDay <= 10958){  // this is the real number of days for 2050
+    fechaDomi.setDate(fechaInicial.getDay() + countDay);
+
+    anioContado = fechaDomi.getFullYear();
+    anioContado = parseInt(anioContado);
+
+    mesContado = fechaDomi.getMonth(); // 0 es enero
+    mesContado = parseInt(mesContado);
+
+    diaMes = fechaDomi.getDate();
+    diaMes = parseInt(diaMes);
+
+    diaSemana = fechaDomi.getDay(); // 0 es domingo
+    diaSemana = parseInt(diaSemana);
+
+
+    if (mesContado===0 && diaSemana===0) {
+      console.log(anioContado);
+      console.log(mesContado); // 0 es enero por eso sumamos 1
+      console.log(diaMes);
+      //console.log(diaSemana); // 0 es domingo 
+      console.log("-----------------------------------");
+    };
+
+    countDay++;
+  };
+
+};
