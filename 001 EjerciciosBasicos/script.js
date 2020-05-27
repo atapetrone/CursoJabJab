@@ -537,59 +537,25 @@ function maximo() {
 
 
 
-function domingo() {
-  //let fechaDomi = new Date(); //Este te tomaría la fecha de hoy
-  let fechaDomi = new Date(2020, 0, 1);
-  /* 
-    console.log(fechaDomi.getFullYear());
-    console.log(fechaDomi.getMonth()); // 0 es enero
-    console.log(fechaDomi.getDate());
-    console.log(fechaDomi.getDay()); // 0 es domingo
-    console.log("-----------------------------------");
-   */
-  //IMPORTANTE PRUEBA PARA ENTENDER LA FORMA DE MODIFICAR LA FECHA
-  /* 
-  fechaDomi.setDate(fechaDomi.getDate() + 10958);
-  console.log(fechaDomi.getFullYear());
-  console.log(fechaDomi.getMonth());// 0 es enero
-  console.log(fechaDomi.getDate());
-  console.log(fechaDomi.getDay()); // 0 es domingo
- */
-
-  //fechaDomi.setDate(fechaDomi.getDate() + 10958);
-  let fechaInicial = new Date(2020, 0, 1);
-  //console.log(diaSemana); // 0 es domingo
-  let diaSemana; // = fechaDomi.getDay(); // 0 es domingo;
-  let mesContado;
-  let anioContado;
-  let diaMes;
-  let countDay = 0;
-  while (countDay <= 100) {
-//while (countDay <= 10958){  // this is the real number of days for 2050
-    fechaDomi.setDate(fechaInicial.getDay() + countDay);
-
-    anioContado = fechaDomi.getFullYear();
-    anioContado = parseInt(anioContado);
-
-    mesContado = fechaDomi.getMonth(); // 0 es enero
-    mesContado = parseInt(mesContado);
-
-    diaMes = fechaDomi.getDate();
-    diaMes = parseInt(diaMes);
-
-    diaSemana = fechaDomi.getDay(); // 0 es domingo
-    diaSemana = parseInt(diaSemana);
-
-
-    if (mesContado===0 && diaSemana===0) {
-      console.log(anioContado);
-      console.log(mesContado); // 0 es enero por eso sumamos 1
-      console.log(diaMes);
-      //console.log(diaSemana); // 0 es domingo 
-      console.log("-----------------------------------");
+function domingo() { // Se modifico a lunes pero  las variables se manejaron como domi y la funcion se llama domingo por que originalmente se buscaron los domingos.
+  
+  let countYear = 2020;
+  let strDomi = "";
+  let divDomi = document.querySelector('.domiClass');  
+  
+  while (countYear <= 2060) {
+    let fechaDomi = new Date(countYear, 0, 1);
+    if (fechaDomi.getDay() === 1) { // Si quisieramos buscar domingos habría que poner un 0
+      let phrase =`El año cuando ocurre este fenómeno es ${countYear} y la fecha exacta es: <br> ${fechaDomi}.`;
+      strDomi += `${phrase}<br>--------------------------------------------------------------------------------<br>`;
+      divDomi.innerHTML = strDomi;
     };
-
-    countDay++;
+    countYear++;
   };
 
 };
+
+
+
+
+
