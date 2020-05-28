@@ -35,3 +35,25 @@ a:link, a:visited {
 
  */
 
+/* 
+ pElem.style.color = "gray";
+ pElem.style.fontSize ="21px";
+ pElem.style.maxWidth = "800px";
+ pElem.style.textAlign ="center";
+ */
+ .un-mensaje {
+color: gray;
+font-size: 21px;
+max-width: 800px;
+text-align: center;
+ }
+
+ .on {
+     background-color: white;
+ }
+
+ .centro{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
