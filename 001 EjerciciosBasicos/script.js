@@ -595,15 +595,44 @@ function xxoo() {
 
   //console.log(countX);
   //console.log(countO);
-let resultadoXxoo = `El número de X y de O son diferentes. Para O tenemos ${countO} y para X tenemos ${countX}`;
+  let resultadoXxoo = `El número de X y de O son diferentes. Para O tenemos ${countO} y para X tenemos ${countX}`;
 
-if(countX===0 && countO ===0){
-  resultadoXxoo= `No escribiste ninguna X y ninguna O. Para O tenemos ${countO} y para X tenemos ${countX}`;
-}else if (countX === countO){
-  resultadoXxoo= `El número de X y de O son iguales. Para O tenemos ${countO} y para X tenemos ${countX}`;
-}; 
+  if (countX === 0 && countO === 0) {
+    resultadoXxoo = `No escribiste ninguna X y ninguna O. Para O tenemos ${countO} y para X tenemos ${countX}`;
+  } else if (countX === countO) {
+    resultadoXxoo = `El número de X y de O son iguales. Para O tenemos ${countO} y para X tenemos ${countX}`;
+  };
 
-let agarraXxoo = document.querySelector('.xxooClass');
+  let agarraXxoo = document.querySelector('.xxooClass');
   agarraXxoo.innerText = resultadoXxoo;
+
+};
+
+
+function meGusta() {
+
+let likePersonas = prompt("Escribe el nombre de las personas separadas con una coma");
+
+let personasArray = likePersonas.split(',');
+console.log(personasArray);
+
+let numeroPersonas = personasArray.length
+console.log (numeroPersonas);
+if (numeroPersonas>=1 && numeroPersonas<=3){ 
+  let agarraLike = document.querySelector('.meGustaClass');
+  agarraLike.innerText = `a ${personasArray} les gusta esto`;
+} else if (numeroPersonas>3){
+  let agarraLike = document.querySelector('.meGustaClass');
+  agarraLike.innerText = `a ${personasArray[0]}, ${personasArray[1]} y otras ${numeroPersonas-2} personas les gusta esto`;
+}else{ 
+  let agarraLike = document.querySelector('.meGustaClass');
+  agarraLike.innerText = `a nadie les gusta esto :()`;
+};
+
+
+
+
+
+
 
 };
