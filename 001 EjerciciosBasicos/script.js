@@ -538,15 +538,15 @@ function maximo() {
 
 
 function domingo() { // Se modifico a lunes pero  las variables se manejaron como domi y la funcion se llama domingo por que originalmente se buscaron los domingos.
-  
+
   let countYear = 2020;
   let strDomi = "";
-  let divDomi = document.querySelector('.domiClass');  
-  
+  let divDomi = document.querySelector('.domiClass');
+
   while (countYear <= 2060) {
     let fechaDomi = new Date(countYear, 0, 1);
     if (fechaDomi.getDay() === 1) { // Si quisieramos buscar domingos habría que poner un 0
-      let phrase =`El año cuando ocurre este fenómeno es ${countYear} y la fecha exacta es: <br> ${fechaDomi}.`;
+      let phrase = `El año cuando ocurre este fenómeno es ${countYear} y la fecha exacta es: <br> ${fechaDomi}.`;
       strDomi += `${phrase}<br>--------------------------------------------------------------------------------<br>`;
       divDomi.innerHTML = strDomi;
     };
@@ -555,7 +555,55 @@ function domingo() { // Se modifico a lunes pero  las variables se manejaron com
 
 };
 
+function cuadrado() {
 
+  let cadenaCuad1 = prompt("Escribe una serie de numeros sin espacio entre ellos");
+  let cuadArray = cadenaCuad1.split("");
+  let resultCuadArray = [];
+  //console.log(cuadArray);
 
+  for (let stringCuad of cuadArray) {
+    let digitoCuad = parseInt(stringCuad);
+    let cuadradoRes = Math.pow(digitoCuad, 2);
+    //console.log (cuadradoRes);
+    resultCuadArray.push(cuadradoRes);
+  };
 
+  //console.log(resultCuadArray);
+  let resultCuadString = resultCuadArray.join("");
+  //console.log (resultCuadString);
 
+  let agarraHtmlCuad = document.querySelector('.cuadClass');
+  agarraHtmlCuad.innerText = resultCuadString;
+
+};
+
+function xxoo() {
+
+  let inicioXxoo = prompt('Da un grupo de caracteres principalmente compuesto por "x" y "o" ');
+  let xxooArray = inicioXxoo.split("");
+  let countX = 0;
+  let countO = 0;
+
+  for (let carXxoo of xxooArray) {
+    if (carXxoo === "x" || carXxoo === "X") {
+      countX++;
+    } else if (carXxoo === "o" || carXxoo === "O") {
+      countO++;
+    }
+  };
+
+  //console.log(countX);
+  //console.log(countO);
+let resultadoXxoo = `El número de X y de O son diferentes. Para O tenemos ${countO} y para X tenemos ${countX}`;
+
+if(countX===0 && countO ===0){
+  resultadoXxoo= `No escribiste ninguna X y ninguna O. Para O tenemos ${countO} y para X tenemos ${countX}`;
+}else if (countX === countO){
+  resultadoXxoo= `El número de X y de O son iguales. Para O tenemos ${countO} y para X tenemos ${countX}`;
+}; 
+
+let agarraXxoo = document.querySelector('.xxooClass');
+  agarraXxoo.innerText = resultadoXxoo;
+
+};
