@@ -17,6 +17,16 @@ console.log("------------INICIAN EJEMPLOS CHILDREN--------------");
 console.log(ulEle.childNodes); //ChildNodes te da todo los hijos debajo de ul (son 7 nodos en este ejemplo porque te incluye TODO LO QUE HAY COMO HIJO incluyendo los espacios de tabulacion, por lo tanto se recomienda usar mejor children)
 console.log(ulEle.children); //En este caso solo nos da los 3 elementos HTML correspondientes que se encuentran debajo del ul.
 
+
+console.log("------------CHILDREN SELECTIVO--------------")
+
+console.log(ulEle.children[1]);
+
+
+
+console.log("------------FIN CHILDREN SELECTIVO  /  INICIO FIRSTELEMENTCHILD Y LASTELEMENTCHILD--------------")
+
+
 console.log(ulEle.firstElementChild); //IMPORTANTE:  Si usuaras firstChild  en lugar de firstElementChild obtendrías por resultado el primer nodo, lo cual seria una cadena de texto por el espacio tabulado antes de llegar al primer li.  En cambio firsElementChild si te despliega el primer elemento html
 console.log(ulEle.lastElementChild); //Otro ejemplo pero con LAST
 console.log("------------HASTA AQUI CHILDREN--------------");
