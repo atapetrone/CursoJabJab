@@ -11,9 +11,10 @@ body {
 .container {
   max-width: 960px;
   margin: 0 auto;
+  /* margin-left: 260px; */
 }
 .nav {
-  transition: 0.3s all ease;
+  transition: 0.5s all ease;
   position: absolute;
   width: 260px;
   left: -260px;
@@ -33,7 +34,7 @@ body {
   border-bottom: 1px solid #333;
   padding: 1.2rem;
   text-transform: uppercase;
-  transition: 0.3s all ease;
+  transition: .5s all ease;
 }
 .menu__item:hover {
   background: #111;
@@ -56,7 +57,7 @@ body {
   width: 36px;
   border-radius: 2px;
   position: relative;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 .change.first-bar {
   top: 11px;
@@ -74,7 +75,7 @@ body {
 
 .content {
   padding: 2rem;
-  transition: 0.3s all ease;
+  transition: 0.5s all ease;
 }
 .shift {
   margin-left: 260px;
