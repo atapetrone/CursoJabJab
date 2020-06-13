@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 22px;
+  background: black;
+}
+
+header {
+  width: 100%;
+  background: rgb(202, 202, 202);
+  color: black;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.aUnLaditoMain {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: nowrap; */
+  /* justify-content: center; */
+  align-items: center;
+  /* align-content: center; */
+}
+
+.centroBoton {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+button {
+
+  font-family: 'Lato', sans-serif;
+  font-size: larger;
+  border: gray 5px;
+  border-radius: 5%;
+  border-style: dotted;
+  margin-top: 5%;
+}
+
+.elDado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 250px;
+  height: 250px;
+  /* max-width: 250px; */
+  border-radius: 20%;
+  border: solid 5px white;
+}
+
+.resultadoDado {
+  color: white;
+  font-size: 100px;
+}
