@@ -45,7 +45,7 @@ body {
   border-radius: 4px;
   padding: 4rem 2rem;
   position: relative;
-  animation: 0.3s slideDown;
+  animation: 0.9s slideDown;
 }
 /*** custom animation ***/
 @keyframes slideDown {
