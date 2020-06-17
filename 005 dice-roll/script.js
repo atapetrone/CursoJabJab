@@ -7,6 +7,9 @@ const elDadoVar= document.querySelector('.elDado');
 
 botonDado.addEventListener('click', function(){
   let resultaDeLanzada = Math.floor((Math.random()*6)+1);
+  
+  
+
   elDadoVar.innerHTML = `<p class="resultadoDado">${resultaDeLanzada}</p>`;
 
 
