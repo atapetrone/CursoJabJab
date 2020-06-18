@@ -38,16 +38,17 @@
 
 input {
   height: 3rem;
-  width: 20rem;
+  width: 30rem;
   margin-bottom: 5rem;
   margin-top: 2rem;
+  border-radius:  10px;
 }
 
 li{
   list-style: none;
   padding:1rem;
   border-bottom: solid yellow;
-  width: 300px;
+  width: 400px;
   
 }
 
