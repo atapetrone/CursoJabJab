@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+  color: #e1e1e1;
+  /* text-align: center; */
+}
+
+.flexMainTD {
+  /* border: solid black; */
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.cajaGeneral {
+  padding: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  
+
+  background: #333333;
+  width: 50%;
+
+
+
+}
+
+.tituloTodo {
+  /* border: solid white; */
+  padding: 5% 0% 5% 0%;
+}
+
+input {
+  height: 3rem;
+  width: 20rem;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+}
+
+li{
+  list-style: none;
+  padding:1rem;
+  border-bottom: solid yellow;
+  width: 300px;
+  
+}
+
+li:first-child {
+  border-top: solid yellow;
+}
