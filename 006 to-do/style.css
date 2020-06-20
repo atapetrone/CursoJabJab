@@ -7,6 +7,7 @@
   font-family: 'Montserrat', sans-serif;
   color: #e1e1e1;
   /* text-align: center; */
+
 }
 
 .flexMainTD {
@@ -38,6 +39,10 @@
   padding: 5% 0% 5% 0%;
 }
 
+input::placeholder{
+  color: #c0c0c0;
+}
+
 input {
   height: 3rem;
   width: 30rem;
@@ -46,20 +51,31 @@ input {
   border-radius:  10px;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color: #333333;
 }
 
-li{
+.itemTodo{
   list-style: none;
-  padding:1rem;
+  padding-top:2rem;
+  padding-bottom: .5rem;
+  padding-right: .5rem;
   border-bottom: solid yellow;
   width: 400px;
+  font-size: 1.3rem;
 }
 
 li:first-child {
-  border-top: solid yellow;
+  border-top: solid rgb(114, 114, 114);
+  padding-top: 40px;
 }
 
 li:hover {
   cursor: default;
+}
+
+.done {
+text-decoration:  line-through rgb(165, 165, 165);
+color: #696969;
+border-bottom: solid rgb(92, 92, 0);
 }
