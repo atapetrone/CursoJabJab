@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+  margin 0px;
+  padding 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #e1e1e1;
+}
+
+.divMaster{
+  /* border: solid black; */
+  margin: 0 auto;
+  max-width: 60%;
+  min-width: 680px;
+}
+
+.cajaPrincipal {
+  /* border: solid black; */
+  margin-top: 2rem;
+  padding: 2rem 4rem;
+  border-radius: 4px;
+  background: rgb(65, 65, 65);
+  height: 668px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  }
+
+
+.titulo {
+  /* border: solid black; */
+  font-size: 310%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.inputTodo {
+  font-size: 1rem;
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  /* margin: 10px 55px; */
+}
+
+.ulEstilo {
+  /* border: solid black; */
+  padding-left: 0px;
+
+}
+
+.marcaItem {
+  list-style: none;
+  padding: 10px 0px;
+  margin-bottom: 30px;
+  width: 100%;
+  border-bottom: solid yellow;
+  font-size: 1.3rem;
+    /* border: solid black; */
+  /* text-align: left; */
+}
+.marcaItem:hover{
+  cursor: default;
+}
+
+.marcaItem:first-child {
+  margin-top: 40px;
+}
+
+.botonX {
+  float: right;
+  background: #313131;
+  color: #eeeeee;
+  padding: 5px 8px;
+}
+
+.botonX:hover {
+  background: rgb(100, 0, 0);
+}
+
+.done{
+  text-decoration: line-through;
+  color: #626262;
+  border-bottom: solid rgb(88, 88, 0);
+
+}
