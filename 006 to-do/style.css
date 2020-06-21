@@ -19,14 +19,14 @@
 
 .cajaGeneral {
   padding: 120px;
+  padding-top: 40px;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
-  
-
+  height: 600px;
+  /* max-height: 600px; */
   background: #333333;
   width: 50%;
 
@@ -72,6 +72,19 @@ li:first-child {
 
 li:hover {
   cursor: default;
+}
+
+.botonX{
+  background: #535353;
+  color: rgb(255, 255, 255);
+  padding: 4px 8px;
+  float: right;
+  border-radius: 3px;
+  
+}
+.botonX:hover{
+  background: #750000;
+  color: rgb(255, 255, 255);
 }
 
 .done {
