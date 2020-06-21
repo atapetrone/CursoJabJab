@@ -5,7 +5,6 @@ const ulEle = document.querySelector(".ulTodo");
 const ilEles = document.querySelectorAll(".itemTodo");
 
 
-
 function teclaEnter() {
   inputEle.addEventListener('keydown', function (event) {
     //console.log(event);
@@ -17,10 +16,11 @@ function teclaEnter() {
       inputEle.value = "";
       let nuevoLiResult = creandoLi(mensaje);
       //console.log(nuevoLiResult);
-      ///ulEle.appendChild(nuevoLiResult);///Aca inserta al ultimo de la lista... a continuación usaremos "insertBefore" para que ponga el nuevo elemento antes de los demás
-
+      
+      ///ulEle.appendChild(nuevoLiResult);
+      ///En la linea anterior se inserta al ultimo de la lista... a continuación usaremos "insertBefore" para que ponga el nuevo elemento antes de los demás elementos de la lista
       ulEle.insertBefore(nuevoLiResult,ulEle.firstElementChild);
-      ///La siguiente linea inyecta y activa los listeners para reaccionar cuando hagan falta
+      
     };
   });
 };
@@ -34,8 +34,6 @@ function creandoLi(texto) {
   //console.log(nuevoLi);
   return nuevoLi;
 };
-
-
 
 
 function elEventoDone() {
@@ -55,11 +53,6 @@ function elEventoDone() {
 
   });
 };
-
-
-
-
-
 
 teclaEnter();
 elEventoDone();
