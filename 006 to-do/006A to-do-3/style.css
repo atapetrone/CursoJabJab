@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Krona One', sans-serif;
+  font-size: 130%;
+}
+
+.contentPrincipal{
+  /* border: solid black; */
+  margin: 0 auto;
+  margin-top: 10%;
+  max-width: 60%;
+}
+
+.cajaGris{
+  height: 600px;
+  background: gray;
+  overflow-y: scroll;
+  padding: 7% 3%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+
+
+.toDoItemInput{
+  margin: 30px 5px;
+  padding: .5rem 1rem;
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border-style: none;
+ }
+
+ .bodyDiv{
+  /* border: solid black;  */
+  /* display: flex; */
+  text-align: left;
+  }
+
+ 
+  .itemTarea{
+    list-style: none;
+    padding: 1rem 0rem;
+    padding-left: 1rem;
+    border-bottom: solid yellow;
+    margin-bottom: 25px;
+  }
+
+.itemTarea:hover{
+  cursor: default;
+}
+
+  .botonX{
+    float: right;
+    position: relative;
+    top:-5px;
+    font-size: 1.5rem;
+    padding: 0rem .5rem;
+    margin-right: 1rem;
+    
+  }
+
+  .done{
+color: rgb(56, 56, 56);
+border-bottom: solid rgb(136, 136, 0);
+  }
+
+
+
+
+
+
+
+
