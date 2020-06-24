@@ -47,6 +47,9 @@ margin-bottom: 5%;
   padding: 5px;
   color: rgb(46, 46, 46);
 }
+.tareaLi:hover{
+  cursor: default;
+}
 
 .botonX{
   position: relative;
@@ -55,6 +58,8 @@ margin-bottom: 5%;
   margin-left: 10px;
   padding: 0px 5px;
   font-size: larger;
+  border: none;
+  background: rgb(212, 212, 212);
 }
 .botonX:hover{
   background: rgb(255, 216, 224);
@@ -66,10 +71,18 @@ margin-bottom: 5%;
   float: right;
   padding: 0px 2px;
   font-size: larger;
+  border: none;
+  background: rgb(212, 212, 212);
   }
   .edicion:hover{
     background: rgb(255, 231, 150);
     
+  }
+
+  .done{
+    background: rgba(238, 238, 238, 0.178);
+    color: rgb(68, 68, 68);
+    text-decoration: line-through;
   }
 
 

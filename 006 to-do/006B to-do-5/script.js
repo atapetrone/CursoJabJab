@@ -26,5 +26,21 @@ function crearLi(msg2) {
   return nuevoLi;
 };
 
+function detectaListaUl() {
+  listaTareas.addEventListener('click', function (evento2) {
+    if (evento2.target.classList.contains("tareaLi")) {
+      evento2.target.classList.toggle("done");
+    } else if (evento2.target.classList.contains("botonX")) {
+      if(confirm('¿Desea borrar esta tarea?')){
+        evento2.target.parentElement.remove();
+      };
+    } else if (evento2.target.classList.contains("edicion")) {
+      let remensaje = prompt("Escribe la tarea");
+      evento2.target.parentElement.innerHTML=`${remensaje}<button class="botonX">x</button><button class="edicion">edit</button>`;
+      //console.log(remensaje);
+    };
+  });
+};
 
+detectaListaUl();
 detectaEnter();
