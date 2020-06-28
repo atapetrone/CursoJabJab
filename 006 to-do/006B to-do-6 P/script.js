@@ -1,5 +1,6 @@
 const inputTarea = document.querySelector('.inputTarea');
 const ulLista = document.querySelector('.listaTareas');
+const botonImprimir = document.querySelector('.impresion');
 const apunte = [];
 
 function detectaEnter(cuentaEnter) {
@@ -135,10 +136,14 @@ function botones(nume) {
 
 };
 
+function imprimiendo(){
+botonImprimir.addEventListener('click', function(){
+window.print();
+});
+};
 
 
-
-
+imprimiendo();
 totalIncrem = botones(1);
 doneLi();
 totalIncrem = detectaEnter(1);
