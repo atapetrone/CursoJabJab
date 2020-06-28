@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: beige;
+}
+
+
+
+.cajaPrincipal {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.cajaGris {
+  background: rgb(88, 88, 80);
+  margin-top: 10%;
+  height: 600px;
+}
+
+.headerDiv {
+  /* border: solid black; */
+  padding-top: 2%;
+ padding-bottom: 2%; 
+}
+
+/* 
+.labelTarea {
+  position: relative;
+  top: 1rem;
+  left: 1rem;
+  
+  float: left;
+}
+ */
+.inputTarea {
+  width: 95%;
+  font-size: 1.3rem;
+  padding: .6rem;
+  margin-top: 1rem;
+
+}
+
+
+.bodyDiv {
+  /* border: solid black; */
+  max-width: 97%;
+  height: 70%;
+  overflow-y: scroll;
+}
+
+
+.cajaUl {
+  text-align: left;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+
+
+li {
+  font-size: 1.2rem;
+  border-bottom: solid yellow;
+  max-width: 100%;
+  list-style: none;
+  margin-right: 10px;
+  padding-top: 1.5rem;
+  cursor: default;
+  /* color: black; */
+}
+
+.botonX {
+  position: relative;
+  bottom: 1px;
+  float: right;
+  margin: 0px 5px;
+  padding: 2px 4px;
+  border: none;
+  font-size: 1rem;
+}
+
+.botonX:hover {
+  background: rgb(82, 0, 0);
+  color: beige;
+  border: none;
+}
+
+.botonEdit {
+  position: relative;
+  bottom: 1px;
+  float: right;
+  margin: 0px 5px;
+  padding: 2px 4px;
+  border: none;
+  font-size: 1rem;
+}
+
+.botonEdit:hover {
+  background: rgb(82, 0, 0);
+  color: beige;
+  border: none;
+}
+
+.botonSwap {
+  position: relative;
+  bottom: 1px;
+  float: right;
+  margin: 0px 5px;
+  padding: 2px 4px;
+  border: none;
+  font-size: 1rem;
+}
+
+.botonSwap:hover {
+  background: rgb(82, 0, 0);
+  color: beige;
+  border: none;
+}
+
+
+
+
+
+
+.done {
+  /* background: rgba(238, 238, 238, 0.178); */
+  color: rgb(61, 61, 61);
+  text-decoration: line-through;
+  border-bottom: solid rgb(100, 100, 0);
+}
+
+.botonDone {
+  background: rgb(144, 144, 144);
+  color: rgb(77, 77, 77);
+}
+
+/* 
+@media only screen and (max-width: 1200px) {
+  .bodyDiv {
+   
+    height: 70%;
+  }
+  .headerDiv{
+    padding-bottom: 0%;
+  }
+}
+ */
+ .footDiv{
+   border: solid rgb(167, 167, 167);
+   color: gray;
+   padding: 10px;
+   text-align: left;
+ }
+ .footDiv>p{
+   color: rgb(70, 70, 70);
+ }
+ .tituloFoot{
+   color: gray;
+ }

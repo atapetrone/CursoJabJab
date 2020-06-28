@@ -11,7 +11,8 @@ function detectaEnter() {
     if (evento.keyCode === 13) {
       let mensaje = inputTarea.value;
       let liCreado = crearLi(mensaje);
-      listaTareas.appendChild(liCreado);
+      //listaTareas.appendChild(liCreado);
+      listaTareas.insertBefore(liCreado,listaTareas.firstElementChild);
       inputTarea.value = "";
     };
   });
@@ -31,13 +32,29 @@ function detectaListaUl() {
     if (evento2.target.classList.contains("tareaLi")) {
       evento2.target.classList.toggle("done");
     } else if (evento2.target.classList.contains("botonX")) {
-      if(confirm('¿Desea borrar esta tarea?')){
+      if (confirm('¿Desea borrar esta tarea?')) {
         evento2.target.parentElement.remove();
       };
     } else if (evento2.target.classList.contains("edicion")) {
-      let remensaje = prompt("Escribe la tarea");
-      evento2.target.parentElement.innerHTML=`${remensaje}<button class="botonX">x</button><button class="edicion">edit</button>`;
-      //console.log(remensaje);
+      let porEditar = evento2.target.parentElement.innerText;
+let valueIndex=porEditar.indexOf(`\n`);
+//let totalDeCaract=porEditar.length;
+//console.log(valueIndex);
+//console.log(totalDeCaract);
+let textoFinal= porEditar.slice(0,(valueIndex));
+//console.log(textoFinal);
+
+      //console.log(typeof porEditar);
+      let remensaje = prompt("Escribe la tarea", textoFinal);
+      let elcero= remensaje.length  
+      if (remensaje != null) {
+if(elcero!=0){
+        evento2.target.parentElement.innerHTML = `${remensaje}<button class="botonX">x</button><button class="edicion">edit</button>`;
+      }else{
+        evento2.target.parentElement.innerHTML = `${remensaje}...<button class="botonX">x</button><button class="edicion">edit</button>`;
+      };
+      };
+      
     };
   });
 };

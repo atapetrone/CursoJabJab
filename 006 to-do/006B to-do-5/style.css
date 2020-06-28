@@ -52,8 +52,7 @@ margin-bottom: 5%;
 }
 
 .botonX{
-  position: relative;
-  top: -2px;
+  
   float: right;
   margin-left: 10px;
   padding: 0px 5px;
@@ -66,8 +65,7 @@ margin-bottom: 5%;
 }
 
 .edicion{
-  position: relative;
-  top: -2px;
+  
   float: right;
   padding: 0px 2px;
   font-size: larger;
